@@ -17,7 +17,8 @@ jobs:
     with:
       first-name: "Vincent"
       last-name: "Verweij"
-      age: 33
+      # Not passing age to test for step skipping
+      # age: 33
 
   # test-reusable-workflow-3:
   #   name: Testing reusable workflow v1
