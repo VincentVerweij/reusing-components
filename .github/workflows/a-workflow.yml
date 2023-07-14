@@ -16,12 +16,12 @@ jobs:
       last-name: "Verweij"
 
   test-reusable-workflow-2:
-    name: Testing reusable workflow v1.1.0
+    name: Testing reusable workflow v1.1.1
     concurrency:
       # Cancel running jobs of the same workflow for the same branch
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
-    uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1.1.0
+    uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1.1.1
     with:
       first-name: "Vincent"
       last-name: "Verweij"
@@ -53,12 +53,12 @@ jobs:
   #     age: 33
 
   test-reusable-workflow-5:
-    name: Testing reusable workflow v2.0.0
+    name: Testing reusable workflow v2.0.1
     concurrency:
       # Cancel running jobs of the same workflow for the same branch
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
-    uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v2.0.0
+    uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v2.0.1
     with:
       full-name: "Vincent Verweij"
       age: 33
