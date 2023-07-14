@@ -6,10 +6,6 @@ on:
 jobs:
   test-reusable-workflow-1:
     name: Testing reusable workflow v1.0.0
-    concurrency:
-      # Cancel running jobs of the same workflow for the same branch
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1.0.0
     with:
       first-name: "Vincent"
@@ -17,10 +13,6 @@ jobs:
 
   test-reusable-workflow-2:
     name: Testing reusable workflow v1.1.1
-    concurrency:
-      # Cancel running jobs of the same workflow for the same branch
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1.1.1
     with:
       first-name: "Vincent"
@@ -29,10 +21,6 @@ jobs:
 
   # test-reusable-workflow-3:
   #   name: Testing reusable workflow v1
-  #   concurrency:
-  #     # Cancel running jobs of the same workflow for the same branch
-  #     group: ${{ github.workflow }}-${{ github.ref }}
-  #     cancel-in-progress: true
   #   uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1
   #   with:
   #     first-name: "Vincent"
@@ -42,10 +30,6 @@ jobs:
 
   # test-reusable-workflow-4:
   #   name: Testing reusable workflow v1.1
-  #   concurrency:
-  #     # Cancel running jobs of the same workflow for the same branch
-  #     group: ${{ github.workflow }}-${{ github.ref }}
-  #     cancel-in-progress: true
   #   uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v1.1
   #   with:
   #     first-name: "Vincent"
@@ -54,10 +38,6 @@ jobs:
 
   test-reusable-workflow-5:
     name: Testing reusable workflow v2.0.1
-    concurrency:
-      # Cancel running jobs of the same workflow for the same branch
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     uses: VincentVerweij/reusable-components/.github/workflows/say-hello.yml@v2.0.1
     with:
       full-name: "Vincent Verweij"
